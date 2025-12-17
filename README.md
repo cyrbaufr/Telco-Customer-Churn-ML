@@ -1,4 +1,9 @@
 ## Telco Churn – End-to-End ML Project
+
+### Link to Anas' YouTube amazing video!
+This video is covering a wide range of topics covering most skills expected for a MLOPS engineer
+https://www.youtube.com/watch?v=luJ64trcCwc
+
 ### Purpose
 
 Build and ship a full machine-learning solution for predicting customer churn in a telecom setting—from data prep and modeling to an API + web UI deployed on AWS.
