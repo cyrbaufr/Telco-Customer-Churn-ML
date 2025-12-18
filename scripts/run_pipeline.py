@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
 """
 Runs sequentially: load → validate → preprocess → feature engineering
+
+To run MLflow locally, start tracking server with following command
+in a separate terminal with .venv activated:
+`mlflow server --host 127.0.0.1 --port 5000`
+
+Then run the following command from projet root to execute the pipeline:
+python scripts/run_pipeline.py \                                            
+    --input data/raw/Telco-Customer-Churn.csv \
+    --target Churn \
+    --mlflow_uri http://localhost:5000
+
+Open MLflow UI in browser at http://localhost:5000 to view experiments.
+
+Otherwise, omit --mlflow_uri to use local file-based tracking at ./mlruns
 """
 
 import os
@@ -40,6 +54,7 @@ def main(args):
     mlruns_path = args.mlflow_uri or f"file://{project_root}/mlruns"  # Local file-based tracking
     mlflow.set_tracking_uri(mlruns_path)
     mlflow.set_experiment(args.experiment)  # Creates experiment if doesn't exist
+
 
     # Start MLflow run - all subsequent logging will be tracked under this run
     with mlflow.start_run():
@@ -237,6 +252,5 @@ if __name__ == "__main__":
 
 python scripts/run_pipeline.py \                                            
     --input data/raw/Telco-Customer-Churn.csv \
-    --target Churn
-
+    --target Churn \
 """
