@@ -97,6 +97,8 @@ requests==2.32.4
 rpds-py==0.27.0
 ruamel.yaml==0.18.14
 ruamel.yaml.clib==0.2.12
+# added setuptools to fix mlflow installation issue with python 3.12
+setuptools==80.9.0
 scikit-learn==1.5.2
 scipy==1.16.1
 seaborn==0.13.2
