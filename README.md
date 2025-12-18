@@ -1,7 +1,7 @@
 ## Telco Churn – End-to-End ML Project
 
 ### Link to Anas' YouTube amazing video!
-This video is covering a wide range of topics covering most skills expected for a MLOPS engineer
+This video is covering a wide range of topics covering most skills expected for a MLOPS engineer  
 https://www.youtube.com/watch?v=luJ64trcCwc
 
 ### Purpose
@@ -14,6 +14,13 @@ Build and ship a full machine-learning solution for predicting customer churn in
 - Operationalized ML: Model is accessible via a REST API and a simple UI; anyone can test it without notebooks.
 - Repeatable delivery: CI/CD + containers mean every change can be rebuilt, tested, and redeployed in a consistent way.
 - Traceable experiments: MLflow tracks runs, metrics, and artifacts for reproducibility and auditing.
+
+## Create virtual environment and install dependencies
+- create python 3.12 venv: `python3.12 -m venv .venv`
+- activate venv: `source .venv/bin/activate`
+- upgrade pip: `pip install --upgrade pip`
+- install uv: `pip install uv`
+- use uv to install dependencies: `uv pip install -r requirements.txt`
 
 ### What I built
 
